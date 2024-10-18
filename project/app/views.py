@@ -13,14 +13,29 @@ def fun2(req,a, b, c):                  ##greatest
         return HttpResponse(c)
 
 def index_page(request):
-    return render(request, 'index.html')         ##html
+    name='agnaey'
+    age=21
+    place='knr'
+    return render(request, 'index.html',{'name':name,'age':age,'place':place})         ##html
 
-def fun3(request,salary,yearofservice):
+
+
+def fun3(request,salary,yearofservice):         ##work1
     if yearofservice>5:
         salary*0.05
         total=(0.05* salary)+salary
         return HttpResponse("you are eligible ",total)
     else:
         return HttpResponse("you are not eligible")
+    
+def demo_page(req):
+    # l=[1,2,3,4,5,6,7]
+    # l={'name':'agnaey','age':21,'place':'knr'}
+    l=[{'name':'agnaey','age':21,'place':'knr'},{'name':'akshay','age':20,'place':'knr'},{'name':'kartik','age':21,'place':'koz'}]
+    d={'name':'akshay','age':20,'place':'knr'}
+    return render(req,'demo.html',{'data':l,'data1':d})
+
+def sec_page(req):
+    return render(req,'second.html')
 
 
