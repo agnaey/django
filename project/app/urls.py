@@ -8,5 +8,6 @@ urlpatterns = [
     path('work1/<int:salary>/<int:yearofservice>', views.fun3),
     path('demo',views.demo_page),
     path('sec',views.sec_page),
+    path('todo',views.todo_page),
 
 ]

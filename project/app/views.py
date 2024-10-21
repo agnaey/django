@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse
+todo=[]
 
 # Create your views here.
 def fun1(request):
@@ -37,5 +38,14 @@ def demo_page(req):
 
 def sec_page(req):
     return render(req,'second.html')
+
+def todo_page(req):
+    if req.method=='POST':
+        id=req.POST['id']
+        task=req.POST['task']
+        todo.append({'id':id,'task':task})
+        print(todo)
+        return redirect(todo_page)
+    return render (req,'todo.html',{'todo':todo})
 
 
