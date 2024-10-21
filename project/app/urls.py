@@ -9,5 +9,5 @@ urlpatterns = [
     path('demo',views.demo_page),
     path('sec',views.sec_page),
     path('todo',views.todo_page),
-
+    path('edit',views.edit_page),
 ]

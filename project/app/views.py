@@ -48,4 +48,7 @@ def todo_page(req):
         return redirect(todo_page)
     return render (req,'todo.html',{'todo':todo})
 
+def edit_page(req):
+    return render(req,'edit.html')
+
 

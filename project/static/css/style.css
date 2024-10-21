@@ -7,6 +7,7 @@ b{
 img{
     margin-top: 30px;
 }
-table,th,td{
-    border: 1px solid rgb(206, 36, 36);
+table, th, td {
+    border: 1px solid black;
 }
+
