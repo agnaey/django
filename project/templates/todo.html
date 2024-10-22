@@ -6,6 +6,8 @@
     <title>Document</title>
     {% load static %}
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
+     
+    <!-- <link rel="stylesheet" href="../static/css/style.css"> -->
 </head>
 <body>
     <h2>welcome</h2>
@@ -24,9 +26,10 @@
         <tr>
             <td>{{i.id}}</td>
             <td>{{i.task}}</td>
+            <td><a href="edit/{{i.id}}">edit</a>
+            <a href="delete/{{i.id}}">delete</a></td>
         </tr>
         {% endfor %}
     </table>
-    <a href="">edit</a>
 </body>
 </html>
