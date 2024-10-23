@@ -1,4 +1,15 @@
 body{
-    background-color: rgb(244, 203, 0);
-    color: rgb(0, 0, 0);
+    background-color: rgb(244, 187, 0);
+    color: rgb(240, 8, 8);
+}
+table,th,td{
+    border: 1px solid #1b0cec;
+    padding: 10px;
+}
+input{
+    margin-top: 10px;
+    padding:5px;
+}
+.submit{
+    margin-left: 50px;
 }
