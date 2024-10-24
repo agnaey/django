@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+</head>
+<body>
+    <h1>Edit student</h1>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        roll no : <input type="text" name="roll" value="{{data.roll_no}}"><br>
+        name :  <input type="text" name="name" value="{{data.name}}"><br>
+        age : <input type="text" name="age" value="{{data.age}}"><br>
+        email : <input type="text" name="email" value="{{data.email}}"><br>
+        phone no : <input type="text" name="phone" value="{{data.phone}}"><br>
+        <input class="submit" type="submit" value="edit">
+        
+</body>
+</html>

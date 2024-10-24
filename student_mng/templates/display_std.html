@@ -10,7 +10,18 @@
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
 </head>
 <body>
-    <h2>student table</h2>
+    <h1>Display Students</h1>
+
+    <!-- <form action="add_std" method="post">
+         {% csrf_token %}
+        roll no : <input type="text" name="roll_no" id="roll_no"><br>
+        name :  <input type="text" name="name" id="name"><br>
+        age : <input type="text" name="age" id="age"><br>
+        email : <input type="text" name="email" id="email"><br>
+        phone no : <input type="text" name="phone" id="phone"><br>
+        <input class="submit" type="submit" value="submit">
+        
+    </form> -->
     <table>
         <tr>
             <th>roll_no</th>
@@ -26,13 +37,12 @@
             <td>{{std.age}}</td>
             <td>{{std.email}}</td>
             <td>{{std.phone}}</td>
+            <td><a class="btn btn-outline-primary" href="edit/{{std.pk}}">edit</a>
+            <a class="btn btn-outline-danger" href="">delete</a></td>
         </tr>
         {% endfor %}
     </table>
 
-    <a class="btn btn-outline-primary" href="disp">display_std</a> <br>
-    <a class="btn btn-outline-success" href="add">add_std</a>
-
-
+    <a class="btn btn-success" href="add">add students</a>
 </body>
 </html>

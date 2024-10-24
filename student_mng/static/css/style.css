@@ -2,14 +2,26 @@ body{
     background-color: rgb(244, 187, 0);
     color: rgb(240, 8, 8);
 }
+h1{
+    text-decoration: underline;
+    text-align: center;
+}
 table,th,td{
     border: 1px solid #1b0cec;
     padding: 10px;
 }
+table{
+    margin-left: 10px;
+}
 input{
     margin-top: 10px;
     padding:5px;
+    border-radius: 20px;
 }
 .submit{
     margin-left: 50px;
+}
+.btn{
+    margin-top: 15px;
+    margin-left: 10px;
 }

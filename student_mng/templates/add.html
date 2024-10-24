@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
     {% load static %}
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
 </head>
@@ -11,7 +12,8 @@
     <h1>add student</h1>
 
     <form action="" method="post">
-        roll no : <input type="text" name="roll_no" id="roll_no"><br>
+        {% csrf_token %}
+        roll no : <input type="text" name="roll" id="roll"><br>
         name :  <input type="text" name="name" id="name"><br>
         age : <input type="text" name="age" id="age"><br>
         email : <input type="text" name="email" id="email"><br>
