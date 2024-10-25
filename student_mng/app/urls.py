@@ -5,7 +5,8 @@ urlpatterns=[
     path('index',views.index_page),
     path('add',views.add_std),
     path('disp',views.disp_std),
-    path('edit/<id>',views.edit_std)
+    path('edit/<id>',views.edit_std),
+    path('delete/<id>',views.delete_std),
 
 
 ]
