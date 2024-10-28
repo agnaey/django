@@ -25,8 +25,8 @@ def shop_logout(req):
 
 
 def shop_home(req):
-    # if 'shop' in req.session:
-    #     return redirect(req,'shop/shop_home.html')
-    # else:
-       return render(req,'shop/shop_home.html')
+    if 'shop' in req.session:
+        return render(req,'shop/shop_home.html')
+    else:
+       return redirect(shop_home)
 
