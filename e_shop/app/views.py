@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.contrib.auth import authenticate,login,logout
 from . models import *
+import os
 
 # Create your views here.
 def shop_login(req):
@@ -54,7 +55,7 @@ def edit_pro(req,id):
         name=req.POST['name']
         price=req.POST['price']
         offer_price=req.POST['o_price']
-        file=req.FILES.get['img']
+        file=req.FILES.get('img')
         print(file)
         if file:
             product.objects.filter(pk=id).update(pro_id=e_id,name=name,price=price,offer_price=offer_price,img=file)
@@ -62,6 +63,14 @@ def edit_pro(req,id):
             product.objects.filter(pk=id).update(pro_id=e_id,name=name,price=price,offer_price=offer_price)
         return redirect(shop_home)
     return render(req,'shop/edit_pro.html',{'data':pro})
+
+def delete_pro(req,id):
+    data=product.objects.get(pk=id)
+    url=data.img.url
+    url=url.split('/')[-1]
+    os.remove('media/'+url)
+    data.delete()
+    return redirect(shop_home)
 
 
 

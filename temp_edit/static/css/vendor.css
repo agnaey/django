@@ -94,7 +94,7 @@
     margin-left: -16px;
     margin-top: -16px;
     z-index: 11;
-    background: url(../images/chocolat/loader.gif);
+    background: url("{% static 'images/chocolat/loader.gif' %}") 50% 50% no-repeat;
     opacity: 0;
 }
 .chocolat-loader.chocolat-visible {
@@ -121,7 +121,7 @@
     width: 50px;
     height: 100px;
     cursor: pointer;
-    background: url(../images/chocolat/left.png) 50% 50% no-repeat;
+    background: url("{% static 'images/chocolat/left.png' %}") 50% 50% no-repeat;
     z-index: 17;
     visibility: hidden;
 }
@@ -156,7 +156,7 @@
     width: 50px;
     height: 100px;
     cursor: pointer;
-    background: url(../images/chocolat/right.png) 50% 50% no-repeat;
+    background: url("{% static 'images/chocolat/right.png' %}" ) 50% 50% no-repeat;
     z-index: 17;
     visibility: hidden;
 }
@@ -179,7 +179,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    background: url(../images/chocolat/close.png) 50% 50% no-repeat;
+    background: url("{% static '/images/chocolat/close.png' %}") 50% 50% no-repeat;
 }
 .chocolat-wrapper .chocolat-bottom {
     height: 40px;
@@ -210,7 +210,7 @@
 .chocolat-wrapper .chocolat-fullscreen {
     width: 16px;
     height: 40px;
-    background: url(../images/chocolat/fullscreen.png) 50% 50% no-repeat;
+    background: url("{% static '/images/chocolat/fullscreen.png' %}") 50% 50% no-repeat;
     display: block;
     cursor: pointer;
     float: right;

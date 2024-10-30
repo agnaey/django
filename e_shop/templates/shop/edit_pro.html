@@ -4,17 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/style.css' %}" />
+    <style>
+        h2 {
+            color: blue;
+            text-align: center;
+            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            text-decoration: underline;
+            padding-bottom: 40px;
+        }
+
+        body {
+            color: blue;
+            background-color: #cce6ff;
+            /* display: flex;
+        justify-content: center; */
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+
+        form {
+            text-align: center;
+            font-size: 20px;
+            margin-top: 50px;
+        }
+
+
+        input {
+            height: 30px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            width: 300px;
+        }
+
+        .box {
+            padding-bottom: 50px;
+            margin-top: 100px;
+            margin: auto;
+            width: 500px;
+            border: 2px solid blue;
+            border-radius: 20px;
+            background-color: rgb(31, 184, 240);
+
+        }
+
+        .btn {
+            width: 150px;
+            border-radius: 20px;
+            margin-left: 30px;
+            margin-top: 40px;
+            color: white;
+            background-color: blue;
+
+        }
+        .btn:hover{
+            background-color: rgb(27, 26, 77);
+            color: rgb(255, 255, 255);
+        }
+    </style>
 </head>
 <body>
-    <h2>edit product</h2>
-    <form action="" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        <input type="text" name="pro_id" placeholder="pro_id" value="{{data.pro_id}}">
-        <input type="text" name="name" placeholder="name" value="{{data.name}}">
-        <input type="number" name="price" placeholder="price" value="{{data.price}}">
-        <input type="number" name="o_price" placeholder="offer_price" value="{{data.offer_price}}">
-        <img src="{{data.img.url}}" alt="" style="width: 250px;height: 300px;">
-        <input type="file" name="img" id="">
-        <input type="submit" value="update">
+    <div class="box">
+        <form action="" method="post" enctype="multipart/form-data">
+            <h2>Edit Product</h2>
+
+            {% csrf_token %}
+             ID : <input type="text" name="pro_id" placeholder="pro_id" value="{{data.pro_id}}"><br>
+            Name : <input type="text" name="name" placeholder="name" value="{{data.name}}"><br>
+            Price : <input type="number" name="price" placeholder="price" value="{{data.price}}"><br>
+            Offer Price : <input type="number" name="o_price" placeholder="offer_price" value="{{data.offer_price}}"><br>
+            <img src="{{data.img.url}}" alt="" style="width: 250px;height: 300px;"><br>
+            New Image : <input type="file" name="img" id=""><br>
+            <input class="btn btn-outline-success" type="submit" value="update">
+    </div>
+
 </body>
 </html>

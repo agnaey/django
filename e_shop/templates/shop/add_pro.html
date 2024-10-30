@@ -4,20 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>add</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/style.css' %}" />
+    <style>
+        h2 {
+            color: blue;
+            text-align: center;
+            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            text-decoration: underline;
+            padding-bottom: 40px;
+        }
+
+        body {
+            color: blue;
+            background-color: #cce6ff;
+            /* display: flex;
+        justify-content: center; */
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+
+        form {
+            text-align: center;
+            font-size: 20px;
+            margin-top: 50px;
+        }
+
+
+        input {
+            height: 30px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            width: 300px;
+        }
+
+        .box {
+            margin-left: 600px;
+            margin-top: 100px;
+            padding-bottom: 100px;
+            width: 500px;
+            border: 2px solid blue;
+            border-radius: 20px;
+            background-color: rgb(31, 184, 240);
+
+        }
+
+        .btn {
+            width: 150px;
+            height: 40px;
+            border-radius: 20px;
+            margin-left: 30px;
+            margin-top: 40px;
+            color: white;
+            background-color: blue;
+
+        }
+        .btn:hover{
+            background-color: rgb(27, 26, 77);
+            color: rgb(255, 255, 255);
+        }
+    </style>
 </head>
 <body>
+<div class="box">
     <h2>Add product</h2>
     <form action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        <input type="text" name="pro_id" placeholder="pro_id">
-        <input type="text" name="name" placeholder="name">
-        <input type="number" name="price" placeholder="price">
-        <input type="number" name="o_price" placeholder="offer_price">
-        <input type="file" name="img" id="">
-        <input type="submit" value="add">
+        <input type="text" name="pro_id" placeholder="pro_id"><br>
+        <input type="text" name="name" placeholder="name"><br>
+        <input type="number" name="price" placeholder="price"><br>
+        <input type="number" name="o_price" placeholder="offer_price"><br>
+        <input type="file" name="img" id=""><br>
+        <input class="btn" type="submit" value="add">
 
     </form>
+</div>
 </body>
 </html>
