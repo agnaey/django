@@ -40,7 +40,7 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="/admin">add</a>
+              <a class="nav-link" href="add_pro">add</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">view product</a>
@@ -63,7 +63,9 @@
             <h4 class="card-title">{{pro.name}}</h4>
             <p class="card-text">{{pro.price}}</p>
             <p class="card-text">{{pro.offer_price}}</p>
-            <a href="#" class="btn btn-outline-primary">Buy</a>
+          <a href="edit_pro/{{pro.pk}}" class="btn btn-outline-warning">edit</a>
+          <a href="delete_pro/{{pro.pk}}" class="btn btn-outline-danger">delete</a>
+
           </div>
         </div>
       </div>

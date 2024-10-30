@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        {% load static %}
+        <!-- <link rel="stylesheet" href="style.css"> -->
+        <!-- <style>
+        #navbar{
+            background-color: #eeeded;
+        }
+        #logo{
+            padding-left: 45%;
+            
+        }
+        /* #slogo{
+        
+        } */
+        
+        
+        #login{
+            position: absolute;
+            right: 15%;
+        }
+        
+        #canva{
+            position: absolute;
+            right: 8%;
+        
+        }
+        #kochi{
+            position: absolute;
+            right: 23%;
+        
+        }
+        
+        
+        
+        #search{
+            width: 100%;
+            height: 100%;
+            display: block;
+            border-radius: 5px;
+        }
+        #slogo{
+            position: absolute;
+            top: 20px;
+            left: 409px;
+            border: none;
+        }
+        #droplogo{
+            position: absolute;
+            top: 20px;
+            left: 13px;
+            border: none;
+        }
+        .text-black{
+            text-decoration: none;
+        }
+        #gift{
+            box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.2), 0px 1px 0px 0 rgba(0, 0, 0, 0.19);
+        }
+        #noti:hover{
+            background-color: #eeeded;
+        }
+        #order{
+            color:rgba(0, 0, 0, 0.308);
+        }
+        
+        #nav2{
+            background-color: rgb(245,245,245);
+            padding-top: 1%;
+        }
+        #navrow{
+            padding-left: 15%;
+        }
+        #rec{
+            margin-left: 14%;
+        }
+        #rev{
+            padding-right: 11115px;
+        }
+        .movie-card {
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .movie-card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 3px solid #f8f9fa;
+        }
+        .movie-details {
+            padding: 10px;
+        }
+        .movie-title {
+            font-weight: bold;
+            margin-top: 10px;
+            text-decoration: none;
+        }
+        .movie-genre {
+            color: #6c757d;
+            font-size: 14px;
+            text-decoration: none;
+        
+        }
+        .movie-stats {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+        }
+        .movie-stats span {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .movie-stats i {
+            margin-right: 5px;
+        }
+        #premi{
+            background-color: rgb(43,49,72);
+        }
+        #mov{
+            color: white;
+        }
+        #pre{
+            margin-left: 9%;
+        }
+        .search-card{
+            background-color:#fcfcfc;
+            border:1px solid #e1e1e1;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        .search-card:hover{
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .search-card h5{
+            font-weight: 600;
+        }
+        .search-card p{
+            color: #6c757d;
+            font-weight: 400;
+        }
+        
+        
+        #main1{
+            position: relative;
+            background-size: cover;
+            height: 500px;
+            background-image: url("{% static 'images/arm.jpg' %}");
+        }
+        #main1::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.526);
+            z-index: 1;
+        }
+        #main2{
+            position: relative;
+            z-index: 2;
+            left: 16%;
+        
+        }
+        
+        #arm{
+            position: relative;
+            opacity: 1;
+        }
+        
+          
+          .rating {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+          }
+        #star {
+            color: red;
+            font-size: 27px;
+          }
+          
+          .rating .score {
+            font-size: 1.5rem;
+            margin-left: 5px;
+          }
+          
+          .rating .votes {
+            font-size: 1rem;
+            margin-left: 10px;
+          }
+          
+          .rate-btn {
+            margin-left: 15px;
+            font-size: 0.9rem;
+          }
+          .moviedetail {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+          }
+          
+          .moviedetail span {
+            background-color: #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+          }
+        
+        #main3{
+            position: relative;
+            z-index: 1;
+            top: -15%;
+            left: 6%;
+            opacity: 1;
+            color: white;
+        }
+        #rating{
+            background-color:rgb(51,51,51);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        #ratebtn{
+            background-color: rgb(255, 255, 255);
+            color: black;
+        }
+        #lang{
+            background-color: white;
+            color: #000;
+            border-radius: 4px;
+        }
+        #book{
+            background-color: rgb(248,68,100);
+            color: white;
+            border-radius: 9px;
+            text-decoration: none;
+            padding: 15px 49px;
+            font-size: 17px;
+            position: relative;
+            top: 45px;
+            
+        }
+        #no{
+            color: rgb(248,68,100);
+        }
+        #no{
+            border: #6c757d79 1px solid;
+            padding: 15px 25px;
+            font-size: 16px;
+        }
+        #no1{
+            background-color: #d0d2d474;
+            padding: 5px;
+        }
+        #prev,
+        #next {
+            background-color: #747774;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #more{
+            text-decoration: none;
+            color: rgb(248,68,100);
+        }
+        #revbox{
+            border: 1px solid rgba(154, 150, 150, 0.614);
+            margin-left: 60px;
+        }
+        
+        .footer {
+            background-color: #2d2f30;
+            color: white;
+          }
+          
+          .footer a {
+            color: white;
+          }
+          
+          .footer-logo {
+            font-size: 24px;
+            line-height: 1.2;
+          }
+          
+          .footer-icon {
+            width: 30px;
+            height: 30px;
+          }
+          
+          .footer p {
+            font-size: 14px;
+          }
+          
+          .btn-danger {
+            background-color: #ff5a5f;
+            border: none;
+          }
+          
+          .btn-danger:hover {
+            background-color: #e04747;
+          }
+          #row{
+              background-color: rgb(64,64,67);
+          }
+          
+          
+          #row {
+            justify-content: center;
+            padding-left: 15px;
+            padding-right: 15px;
+          }
+          #icon{
+              margin-top: 20px;
+        
+          }
+          #icon1{
+            /* font-size: 70px; */
+            color: rgb(27, 27, 75);  
+        }
+        
+        
+        .icon-box i, .icon-box p {
+            color: rgb(143, 143, 149); 
+        }
+        
+        
+        .icon-box:hover i, .icon-box:hover p {
+            color: rgb(250, 250, 251); 
+        }
+        
+        
+        
+          #contact{
+            margin-left: 250px;
+          }
+        
+         #heading{
+             color: rgb(176, 174, 174);
+             font-size: 14px;
+         } 
+        .para{
+            color: rgb(128, 124, 124);
+        }
+        #text1{
+            text-decoration: none;
+            color: rgb(128, 124, 124);
+        }
+        
+        #text1:hover{
+            color: white;
+        }
+        
+        .line {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .left-line,
+        .right-line {
+            border: none;
+            height: 1px;
+            background-color: #888;
+            width: 100%;
+        }
+        
+        .logo {
+            margin: 0 15px;
+        }
+        #social1{
+            background-color: #888;
+            color: rgb(45,47,48);
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
+        #social1:hover{
+            background-color: white;
+        }
+        #text2{
+            color: rgb(128, 124, 124);
+        }
+        
+        
+        
+        @media screen and (max-width: 768px) {
+            .movie-card{
+                width: 30%;
+                height: 30%;
+        
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .movie-card{
+                width: 300px;
+                height: 300px;
+            
+        }
+        } 
+        </style>         -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    </head>
+    <body>
+        <nav id="navbar" class="navbar  bg-body-teriary fixed-top content d-none d-md-block">
+            <div class=" container-fluid">
+                <form class="d-flex justify-content-center" role="search" style="width: 600px;">
+                    <img id="logo"  src="{% static 'images/logo.png' %}" alt=""height="50px"></a>
+                    <i id="slogo"  class="  fa-solid fa-magnifying-glass" aria-hidden="false"></i>
+                    <input id="search"  class="form-control me-2" type="search" placeholder="     Search for Movies,Events,Plays,Sports and Activities" aria-label="Search">
+                </form>
+    
+    
+                
+                <div id="kochi" class="dropdown ">            
+                    <a  class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Kochi
+                    </a>
+                    <ul class="dropdown-menu" style="width: 50vw; left: calc(60% - 35vw);">
+                        <li class="mb-3"><i id="droplogo"  class="  fa-solid fa-magnifying-glass" aria-hidden="false"></i>
+                            <input  class="form-control me-2" type="search" placeholder="     Search for Your City" aria-label="Search"></li>
+                        <li class="mb-3"><a class=" text-danger  text-decoration-none" href="#">&nbsp;&nbsp;<i class="fa-solid fa-location-dot  me-2">
+    
+                        </i>&nbsp;Detect my location</li></a>
+                        <b class="d-flex justify-content-center mb-3">Popluar Cities</b>
+                        <div style="margin-left: 30px;" class="row">
+                            <div class="col ">
+                                <a class="text-decoration-none" href="#">
+                                    <img src="{% static '/images/bang.png' %}" alt="">
+                                    <p class="text-black">Banglore</p>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a class="text-decoration-none" href="#">
+                                    <img src="{% static '/images/chen.avif' %}" alt="">
+                                    <p class="text-black">Chennai</p>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a class="text-decoration-none" href="#">
+                                    <img src="{% static '/images/hyd.png' %}" alt="">
+                                    <p class="text-black">Hyderabad</p>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a class="text-decoration-none" href="#">
+                                    <img src="{% static '/images/mumbai.avif' %}" alt="">
+                                    <p class="text-black">Mumbai</p>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a class="text-decoration-none" href="#">
+                                    <img src="{% static '/images/koch-selected.avif' %}" alt="">
+                                    <p class="text-black">Kochi</p>
+                                </a>
+                            </div>
+    
+                        </div>
+                        <b class="d-flex text-danger justify-content-center mb-3">View All Cities</b>
+                    </ul>    
+                </div>
+    
+    
+    
+    
+                <button id="login" class="btn btn-danger" type="submit">sign in</button>
+                <button id="canva" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div  class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">HEY !</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 ">
+                            <li id="gift" class="p-2 nav-item border-top border-bottom">
+                                <a class="nav-link active" aria-current="page" href="#"><img src="{% static '/images/gift.png' %}" width="50px" alt="Profile" class="rounded-circle mb-2">Unlock special offers & great benefits <p><div class="d-flex justify-content-center"><button class="btn btn-outline-danger">Login/Register</button></div></p></span></a>
+                            </li>
+                            <li id="noti" class="p-2 nav-item border-bottom">
+                                <a class="nav-link " href="#"><i class="fa-regular fa-bell"></i>&nbsp;&nbsp;Notifacations</a>
+                            </li>
+                            <li id="order" style="pointer-events: none; " class="p-2 nav-item border-bottom">
+                                <a id="order" ></a><i id="order" class="fa fa-cart-shopping"></i>&nbsp;&nbsp;Your Order</a>
+                            </li>
+                            <li id="order" style="pointer-events: none; " class="p-2 nav-item border-bottom">
+                                <a id="order" ></a><i class="fa-brands fa-youtube"></i>&nbsp;&nbsp;Stream Libarary</a>
+                            </li>
+                            <li id="noti" class="p-2 nav-item border-bottom">
+                                <a class="nav-link " href="#"><i class="fa-regular fa-credit-card"></i>&nbsp;&nbsp;Play Credit Card</a>
+                            </li>
+                            <li id="noti" class="p-2 nav-item border-bottom">
+                                <a class="nav-link " href="#"><i class="fa-regular fa-comment"></i>&nbsp;&nbsp;Help & Support</a>
+                            </li>
+                            <li id="order" style="pointer-events: none; " class="p-2 nav-item border-bottom">
+                                <a id="order" ></a><i id="order" class="fa-solid fa-gear"></i>&nbsp;&nbsp;Account & Settings</a>
+                            </li>
+                            <li id="noti" class="p-2 nav-item border-bottom">
+                                <a class="nav-link " href="#"><i class="fa-solid fa-gift"></i>&nbsp;&nbsp;Rewards</a>
+                            </li>
+                            <li id="noti" class="p-2 nav-item border-bottom">
+                                <a class="nav-link " href="#"><i class="fa-solid fa-book-medical"></i>&nbsp;&nbsp;BookAChange</a>
+                            </li>
+    
+        </nav>
+    
+        <nav id="nav2" class=" second-navbar mt-5 d-none d-md-block">
+            <div id="navrow" class="row container  pt-2">
+                <div class="col-auto ">
+                    <a class="text-decoration-none" href="#">
+                        <p class="text-black">Movies</p>
+                    </a>
+                </div>
+                <div class="col-auto">
+                    <a class="text-decoration-none" href="#">
+                        <p class="text-black">Steam</p>
+                    </a>
+                </div>
+                <div class="col-auto">
+                    <a class="text-decoration-none" href="#">
+                        <p class="text-black">Events</p>
+                    </a>
+                </div>
+                <div class="col-auto">
+                    <a class="text-decoration-none" href="#">
+                        <p class="text-black">Plays</p>
+                    </a>
+                </div>
+                <div class="col-auto">
+                    <a class="text-decoration-none" href="#">
+                        <p class="text-black">Sports</p>
+                    </a>
+                </div>
+                <div class="col-auto">
+                    <a class="text-decoration-none" href="#">
+                        <p class="text-black">Activities</p>
+                    </a>
+                </div>
+    
+    
+                <div id="navrow2" class="col-auto ms-auto">
+                    <a class="text-decoration-none" href="#">
+                        <p class="text-black">ListYourShow</p>
+                    </a>
+                </div>
+                <div class="col-auto">
+                    <a class="text-decoration-none" href="#">
+                        <p class="text-black">Corparates</p>
+                    </a>
+                </div>
+                <div class="col-auto">
+                    <a class="text-decoration-none" href="#">
+                        <p class="text-black">Offers</p>
+                    </a>
+                </div>
+                <div class="col-auto">
+                    <a class="text-decoration-none" href="#">
+                        <p class="text-black">Gift Cards</p>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- main -->
+        <div id="main1" class="image-fluid d-flex ">
+            <div id="main2" class=" row align-items-center">
+                <!-- Movie Card 1 -->
+                <div class="col-md-4">
+                    <div class="movie-card">
+                        <img src="{% static '/images/arm1.avif' %}" alt="A.R.M">
+                        <div class="movie-details">
+                            <div class="movie-stats" style="background-color: #000000">
+                                <span> In cenima</span>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div id="main3" class="col-md-8">
+                    <div class="movieinfo">
+                        <div class="movietitle"><h1>A.R.M</h1></div>
+                        <div id="rating" class="d-flex align-items-center">
+                            <span id="star" class="star text-orange">&nbsp;&nbsp; ★</span>
+                            <span class="score mx-2"><b>8.7/10</b></span>
+                            <span class="votes">(58.1K Votes) ></span>
+                            <button id="ratebtn" class="btn btn-outline-secondary rate-btn ms-auto"><b>Rate now</b>&nbsp;&nbsp;</button>
+                        </div>
+                        <div class="lang row gap-4 mt-3">
+                            <div id="lang" class="col-2"><b>2D,3D</b></div>
+                            <div id="lang" class="col-9"><span class="language">Malayalam, Hindi, Tamil, Kannada, Telugu</span></div>
+                        </div>
+                        <div class="duration mt-3"><b>2h 23m • Action,Adventure, Drama,Period • UA • 12 Sep, 2024</b></div></div>
+                        
+
+                        <a id="book" class="mt-5" href="#"><b>Book tickets</b></a>
+
+
+                    </div>
+                </div>
+          </div>
+        </div>
+
+<!-- ------------------------------------ -->
+<div class="sample container p-5">
+    <h3><b>About the movie</b></h3>
+    
+    <span>Set in Northern Kerala across the years 1900, 1950, and 1990, this epic tale follows three generations of heroes Maniyan,</span>
+    <span>Kunjikelu, and Ajayan as they strive to protect the land's most vital treasure.</span>
+</div>
+<hr class="mx-auto d-block" width="71%">
+
+
+<!-- ----cast----- -->
+
+<div class="sample container p-5">
+    <h3 class="mb-4 container " ><b>Cast</b></h3>
+
+    <div id="demo" class="carousel slide" data-bs-ride="false">
+        
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex gap-2">
+            <div>
+            <img src="{% static '/images/c1.avif' %}" class=" d-inline rounded-circle" style="width:165px;" alt="">
+            <figcaption style="text-align: center;">Tovino Thomas</figcaption> 
+           </div>
+           <div>
+            <img src="{% static '/images/c2.avif' %}" class=" d-inline rounded-circle" style="width:165px;" alt="">
+            <figcaption style="text-align: center;">Krithi</figcaption>
+           </div>
+           <div>
+            <img src="{% static '/images/c3.avif' %}" class=" d-inline rounded-circle" style="width:165px;" alt="">
+            <figcaption style="text-align: center;">Aiswarya</figcaption>
+            </div> 
+            <div>
+            <img src="{% static '/images/c4.avif' %}" class=" d-inline rounded-circle" style="width:165px;" alt=""> 
+            <figcaption style="text-align: center;">Surabhi</figcaption>
+            </div>
+            <div>
+            <img src="{% static '/images/c5.avif' %}" class=" d-inline rounded-circle" style="width:165px;" alt="">
+            <figcaption style="text-align: center;">Basil</figcaption>
+            </div>
+            <div> 
+            <img src="{% static '/images/c6.avif' %}" class=" d-inline rounded-circle" style="width:165px;" alt="">
+            <figcaption style="text-align: center;">Harish</figcaption>
+            </div>
+            <div> 
+            <img src="{% static '/images/c7.avif' %}" class=" d-inline rounded-circle" style="width:165px;" alt="">
+            <figcaption style="text-align: center;">Madhupal</figcaption> 
+           </div>
+        </div>
+
+
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex gap-2">
+                <div>
+                <img src="{% static '/images/c8.avif' %}" class=" d-inline rounded-circle" style="width:165px;" alt="">
+                <figcaption style="text-align: center;">Rohini</figcaption> 
+               </div>
+               <div>
+                <img src="{% static '/images/c9.avif' %}" class=" d-inline rounded-circle" style="width:165px;" alt="">
+                <figcaption style="text-align: center;">Aju varghese</figcaption>
+               </div>
+               <div>
+                <img src="{% static '/images/c10.avif' %}" class=" d-inline rounded-circle" style="width:165px;" alt="">
+                <figcaption style="text-align: center;">Kabir</figcaption>
+                </div> 
+                <div>
+                <img src="{% static '/images/c11.avif' %}" class=" d-inline rounded-circle" style="width:165px;" alt=""> 
+                <figcaption style="text-align: center;">Jagadeesh</figcaption>
+                </div>
+                <div>
+                <img src="{% static '/images/c12.avif' %}" class=" d-inline rounded-circle" style="width:165px;" alt="">
+                <figcaption style="text-align: center;">Sudheesh</figcaption>
+                </div>
+                <div> 
+                <img src="{% static '/images/c13.avif' %}" class=" d-inline rounded-circle" style="width:165px;" alt="">
+                <figcaption style="text-align: center;">Nisthar</figcaption>
+                </div>
+                <div> 
+                    <img src="{% static '/images/c14.avif' %}" class=" d-inline rounded-circle" style="width:165px;" alt="">
+                    <figcaption style="text-align: center;">Maala</figcaption>
+                    </div>
+          </div>   
+  
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+
+          </div>
+
+<hr class="mx-auto d-block" width="71%">
+
+<div class="sample container p-5">
+    <h3 class="mb-4 container " ><b>Crew</b></h3>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-6 g-4">
+        <div class="col">
+            <img src="{% static '/images/cr1.avif' %}" class="img-fluid rounded-circle" alt="">
+            <figcaption style="text-align: center;">Jithin Laal</figcaption> 
+            <figcaption class="text-secondary" style=" text-align: center;">Director</figcaption> 
+
+        </div>
+        <div class="col">
+            <img src="{% static '/images/cr2.avif' %}" class="img-fluid rounded-circle" alt="">
+            <figcaption style="text-align: center;">Listin Stephen</figcaption>
+            <figcaption class="text-secondary" style=" text-align: center;">Producer</figcaption> 
+        </div>
+        <div class="col">
+            <img src="{% static '/images/cr3.avif' %}" class="img-fluid rounded-circle" alt="">
+            <figcaption style="text-align: center;">Suijith Nambiar</figcaption>
+            <figcaption class="text-secondary" style=" text-align: center;">Writer</figcaption> 
+        </div> 
+        <div class="col">
+            <img src="{% static '/images/cr4.avif' %}" class="img-fluid rounded-circle" alt=""> 
+            <figcaption style="text-align: center;">Dhibu Ninan</figcaption>
+            <figcaption class="text-secondary" style=" text-align: center;">Musician</figcaption> 
+        </div>
+        <div class="col">
+            <img src="{% static '/images/cr5.avif' %}" class="img-fluid rounded-circle" alt="">
+            <figcaption style="text-align: center;">Jomon T</figcaption>
+            <figcaption class="text-secondary" style=" text-align: center;">Cinematography</figcaption> 
+        </div>
+        <div class="col"> 
+            <img src="{% static '/images/cr6.avif' %}" class="img-fluid rounded-circle" alt="">
+            <figcaption style="text-align: center;">Shameer</figcaption>
+            <figcaption class="text-secondary" style=" text-align: center;">Editor</figcaption> 
+        </div>
+    </div>
+    <hr class="mx-auto d-block" width="100%">
+
+ <!-- reviews -->
+ <div class="container mt-3">
+    <!-- Top Reviews Header -->
+    <div class="d-flex justify-content-between align-items-center mb-1">
+        <h3 class="mb-0"><b>Top reviews</b></h3>
+        <a href="#" class="text-danger text-decoration-none">28.5K reviews ></a>
+    </div>
+
+    <!-- Reviews Summary -->
+    <p class="mt-4">Summary of 28.5K reviews.</p>
+
+    <div class="sample container p-5">
+    
+        <div id="demo1" class="carousel slide" data-bs-ride="false">
+            
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="d-flex gap-2">
+                <div>
+                <span id="no" class="badge rounded-pill  mx-2">#GreatActing &nbsp;&nbsp;<small id="no1" class="text-secondary">17443</small></span>
+            </div>
+               <div>
+                <span id="no" class="badge rounded-pill   mx-2">#SuperDirection&nbsp;&nbsp; <small id="no1" class="text-secondary">17147</small></span>
+            </div>
+               <div>
+                <span id="no" class="badge rounded-pill  mx-2">#WellMade&nbsp;&nbsp; <small id="no1" class="text-secondary">15562</small></span>
+            </div> 
+                <div>
+                    <span id="no" class="badge rounded-pill t mx-2">#AwesomeStory&nbsp;&nbsp; <small id="no1" class="text-secondary">11146</small></span>
+                </div>
+                <div>
+                    <span id="no" class="badge rounded-pill  mx-2">#WorthWatching&nbsp;&nbsp; <small id="no1" class="text-secondary">15300</small></span>
+                </div>
+
+            </div>
+    
+    
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex gap-2">
+                    <div> 
+                        <span id="no" class="badge rounded-pill  mx-2">#SuperMovie&nbsp;&nbsp;<small id="no1" class="text-secondary">143532</small></span>
+                    </div>
+                    <div> 
+                        <span id="no" class="badge rounded-pill mx-2">#Wellmade&nbsp;&nbsp; <small id="no1" class="text-secondary">23233</small></span>
+                    </div>
+                    <div> 
+                        <span id="no" class="badge rounded-pill  mx-2">#WorthWatching&nbsp;&nbsp; <small id="no1" class="text-secondary">43534</small></span>
+                    </div>
+                    <div> 
+                        <span id="no" class="badge rounded-pill  mx-2">#Superb&nbsp;&nbsp; <small id="no1" class="text-secondary">10000</small></span>
+                    </div>
+                    <div> 
+                        <span id="no" class="badge rounded-pill  mx-2">#brelient &nbsp;&nbsp;<small id="no1" class="text-secondary">2342</small></span>
+                    </div>
+                    <div> 
+                        <span id="no" class="badge rounded-pill  mx-2">#supersong &nbsp;&nbsp;<small id="no1" class="text-secondary">34234</small></span>
+                    </div>
+              </div>   
+      
+              </div>
+            </div>
+            <button  style="background-color: #747774; border-radius: 50%; width: 25px; height: 25px; position: absolute; top: 30%; right: 0px;" class="carousel-control-prev" type="button" data-bs-target="#demo1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button  style="background-color: #747774; border-radius: 50%; width: 25px; height: 25px; position: absolute; top: 30%; right: 0px;" class="carousel-control-next" type="button" data-bs-target="#demo1" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <div id="demo2" class="carousel slide mt-4" data-bs-ride="false">
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                  <!-- Slide 1 -->
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <!-- Review 1 -->
+                      <div id="revbox" class="col-md-5 mb-4">
+                        <div class="card border-light p-3">
+                          <div class="d-flex align-items-center mb-3">
+                            <img src="{% static '/images/icon.jpg' %}" width="50" height="50" alt="User" class="rounded-circle me-3">
+                            <h6 class="mb-0">Vysakh</h6>
+                            <span class="ms-auto text-dark"><i class="fa fa-star text-danger"></i>10/10 </span>
+                          </div>
+                          <p class="mb-2" style="font-size: 0.9rem; line-height: 1.5;">
+                            അജയന്റെ രണ്ടാം മോഹം സിനിമ കണ്ട് ഇറങ്ങി കഴിഞ്ഞ് ആദ്യം ഓർമയിൽ വന്നത് മുമ്പ് സുഷിൻ ശ്യാം പറഞ്ഞ കാര്യം ആണ് "ഈ സിനിമ മലയാള സിനിമയുടെ സീൻ മാറ്റും"
+                            <a id="more" href="#">...more</a>
+                          </p>
+                          <div class="d-flex align-items-center">
+                            <button class="btn btn-light btn-sm me-2"><i class="fa-regular fa-thumbs-up"></i> 5.7K</button>
+                            <button class="btn btn-light btn-sm"><i class="fa-regular fa-thumbs-down"></i></button>
+                            <small class="ms-auto">25 Days ago</small>
+                            <button class="btn btn-light btn-sm ms-2"><i class="fa fa-share"></i></button>
+                          </div>
+                        </div>
+                      </div>
+              
+                      <!-- Review 2 -->
+                      <div id="revbox" class="col-md-5 mb-4">
+                        <div class="card border-light p-3">
+                          <div class="d-flex align-items-center mb-3">
+                            <img src="{% static '/images/icon.jpg' %}" width="50" height="50" alt="User" class="rounded-circle me-3">
+                            <h6 class="mb-0">User123</h6>
+                            <span class="ms-auto text-dark"><i class="fa fa-star text-danger"></i>8/10 </span>
+                          </div>
+                          <p class="mb-2" style="font-size: 0.9rem; line-height: 1.5;">
+                            #SuperDirection #AwesomeStory #Inspiring #Wellmade
+                            just watched A.R.M. and I'm still reeling from the experience! The movie was absolutely amazing, with Tovino's acting being the standout performance.
+                            <a id="more" href="#">...more</a>
+                            </p>
+                          <div class="d-flex align-items-center">
+                            <button class="btn btn-light btn-sm me-2"><i class="fa-regular fa-thumbs-up"></i> 760</button>
+                            <button class="btn btn-light btn-sm"><i class="fa-regular fa-thumbs-down"></i></button>
+                            <small class="ms-auto">25 Days ago</small>
+                            <button class="btn btn-light btn-sm ms-2"><i class="fa fa-share"></i></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              
+                  <!-- Slide 2 -->
+                  <div class="carousel-item">
+                    <div class="row">
+                      <!-- Review 3 -->
+                      <div id="revbox" class="col-md-5 mb-4">
+                        <div  class="card border-light p-3">
+                          <div class="d-flex align-items-center mb-3">
+                            <img src="{% static '/images/icon.jpg' %}" width="50" height="50" alt="User" class="rounded-circle me-3">
+                            <h6 class="mb-0">Karthik</h6>
+                            <span class="ms-auto text-dark"><i class="fa fa-star text-danger"></i>9/10 </i></span>
+                          </div>
+                          <p class="mb-2" style="font-size: 0.9rem; line-height: 1.5;">
+                            #Entertaining #Interesting #NiceStory #Timepass #CoolMusic #Fun
+                            3ഡി വളരെ മോശം ആണ് 2ഡി യിൽ കാണുമ്പോൾ വളരെ ഇന്ട്രെസ്റ് ആയേനെ 3ഡി ഫേസ് എല്ലാം കുതിരയെ പോലെ ആയിപോയി
+                              </p>
+                          <div class="d-flex align-items-center">
+                            <button class="btn btn-light btn-sm me-2"><i class="fa-regular fa-thumbs-up"></i> 4.2K</button>
+                            <button class="btn btn-light btn-sm"><i class="fa-regular fa-thumbs-down"></i></button>
+                            <small class="ms-auto">15 Days ago</small>
+                            <button class="btn btn-light btn-sm ms-2"><i class="fa fa-share"></i></button>
+                          </div>
+                        </div>
+                      </div>
+              
+                      <!-- Review 4 -->
+                      <div id="revbox" class="col-md-5 mb-4">
+                        <div class="card border-light p-3">
+                          <div class="d-flex align-items-center mb-3">
+                            <img src="{% static '/images/icon.jpg' %}" width="50" height="50" alt="User" class="rounded-circle me-3">
+                            <h6 class="mb-0">Agnaey</h6>
+                            <span class="ms-auto text-dark"><i class="fa fa-star text-danger"></i>7/10 </span>
+                          </div>
+                          <p class="mb-2" style="font-size: 0.9rem; line-height: 1.5;">
+                            #OneTimeWatch #Timepass
+                            പ്രത്യേകിച്ച് ഒന്നുമില്ല.... ഒട്ടും emotionally hook ചെയ്യാത്തെ കഥയും സിനിമയും... എന്തിനിത് 3d ആക്കി ഇറങ്ങി എന്ന് മനസിലാവുന്നില്ല... ആൾക്കാരെ theatre 
+                            <a id="more" href="#">...more</a>
+                        </p>
+                          <div class="d-flex align-items-center">
+                            <button class="btn btn-light btn-sm me-2"><i class="fa-regular fa-thumbs-up"></i> 1.5K</button>
+                            <button class="btn btn-light btn-sm"><i class="fa-regular fa-thumbs-down"></i></button>
+                            <small class="ms-auto">30 Days ago</small>
+                            <button class="btn btn-light btn-sm ms-2"><i class="fa fa-share"></i></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- Carousel controls -->
+                <button id="prev" class="carousel-control-prev" type="button" data-bs-target="#demo2" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button id="next" class="carousel-control-next" type="button" data-bs-target="#demo2" data-bs-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div> 
+        </div>
+ </div>
+
+ <hr>
+
+ <div class="sample container p-5">
+    <div class="d-flex justify-content-between align-items-center mb-1">
+        <h3  class="mb-0"><b>Critic reviews</b></h3>
+        <a href="#"  class="text-danger text-decoration-none ms-2">See all ></a>
+    </div>
+    <div class="row mt-4">
+        <!-- Review 3 -->
+        <div id="revbox" class="col-md-5 mb-4">
+          <div  class="card border-light p-3">
+            <div class="d-flex align-items-center mb-3">
+              <img src="{% static '/images/icon.jpg' %}" width="50" height="50" alt="User" class="rounded-circle me-3">
+              <h6 class="mb-0">The Indian Express</h6>
+              <span class="ms-auto text-dark"><i class="fa fa-star text-danger"></i>7/10 </i></span>
+            </div>
+            <p class="mb-2" style="font-size: 0.9rem; line-height: 1.5;">
+                <p><b>A.R.M</b></p>
+                A landmark film in Tovino Thomas’ career.
+                <a id="more" href="#">...more</a>
+
+                </p>
+            <!-- <div class="d-flex align-items-center">
+              <button class="btn btn-light btn-sm me-2"><i class="fa-regular fa-thumbs-up"></i> 4.2K</button>
+              <button class="btn btn-light btn-sm"><i class="fa-regular fa-thumbs-down"></i></button>
+              <small class="ms-auto">15 Days ago</small>
+              <button class="btn btn-light btn-sm ms-2"><i class="fa fa-share"></i></button>
+            </div> -->
+          </div>
+        </div>
+<hr>
+
+
+
+<div class="sample container p-5">
+    <div class="d-flex justify-content-between align-items-center mb-1">
+        <h3  class="mb-0"><b>Recommended Movies</b></h3>
+        <a href="#"  class="text-danger text-decoration-none ms-2">28.5K reviews ></a>
+    </div>
+<div id="demo3" class="carousel slide" data-bs-ride="false">
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+        <div class="carousel-item active ">
+            <div class="row justify-content-center">
+                <div class="col-md-12 col-lg-3">
+                    <a class="text-decoration-none text-black" href="2ndpage.html">
+                        <div class="movie-card">
+                            <img src="{% static '/images/r1.avif' %}" class="img-fluid">
+                            <div class="movie-details ">
+            
+                                <h5 class="movie-title">Oru Kattil Oru Muri</h5>
+                                <p class="movie-genre">Family/Romantic/Drama</p>
+                            </div>
+                        </div>
+                    </a>
+        
+                </div>
+            
+                <div class="col-md-12 col-lg-3">
+                    <a class="text-decoration-none text-black" href="2ndpage.html">
+                        <div class="movie-card">
+                            <img src="{% static '/images/r2.avif' %}" alt="Kishkindha Kaandam" class="img-fluid">
+                            <div class="movie-details">
+                                <h5 class="movie-title">Meiyazhagan</h5>
+                                <p class="movie-genre">Comedy/Drama</p>
+                            </div>
+                        </div>
+                    </a>
+        
+        
+                </div>
+            
+                <div class="col-md-12 col-lg-3">
+                    <a class="text-decoration-none text-black" href="2ndpage.html">
+                        <div class="movie-card">
+                            <img src="{% static '/images/r3.avif' %}" alt="Kishkindha Kaandam" class="img-fluid">
+                            <div class="movie-details ">
+                                <h5 class="movie-title">Devara - Part 1</h5>
+                                <p class="movie-genre">Drama/Action/Thriller</p>
+                            </div>
+                                
+                        </div>
+                    </a>
+                </div>
+            
+                <!-- Movie Card 4 -->
+                <div class="col-md-12 col-lg-3">
+                    <div class="movie-card">
+                        <img src="{% static '/images/r4.avif' %}" alt="Thekku Vadakku" class="img-fluid">
+                        <div class="movie-details">
+        
+                            <h5 class="movie-title">Venom: The Last Dance</h5>
+                            <p class="movie-genre">Action/Adventure</p>
+                        </div>
+                    </div>
+                </div>
+
+        
+                <!-- <div class="col-md-3">
+                    <div class="movie-card">
+                        <img src="{% static '/images/rec5.avif' %}" alt="Pushpaka Vimanam" class="img-fluid">
+                        <div class="movie-details">
+    
+                            <h5 class="movie-title">Pushpaka Vimanam</h5>
+                            <p class="movie-genre">Fantasy/Thriller</p>
+                        </div>
+                    </div>
+                </div> -->
+        </div>
+        
+      </div>
+      <div class="carousel-item">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-3">
+                <a class="text-decoration-none text-black" href="2ndpage.html">
+                    <div class="movie-card">
+                        <img src="{% static '/images/rec2.avif' %}" alt="Kishkindha Kaandam" class="img-fluid">
+                        <div class="movie-details">
+                            <h5 class="movie-title">Kishkindha Kaandam</h5>
+                            <p class="movie-genre">Mystery/Thriller</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-12 col-lg-3">
+                <a class="text-decoration-none text-black" href="2ndpage.html">
+                    <div class="movie-card">
+                        <img src="{% static '/images/rec1.avif' %}" class="img-fluid">
+                        <div class="movie-details ">
+    
+                            <h5 class="movie-title">A.R.M</h5>
+                            <p class="movie-genre">Action/Adventure/Drama</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+    
+
+    
+            <div class="col-md-12 col-lg-3">
+                <a class="text-decoration-none text-black" href="2ndpage.html">
+                    <div class="movie-card">
+                        <img src="{% static '/images/rec3.avif' %}" alt="Kishkindha Kaandam" class="img-fluid">
+                        <div class="movie-details ">
+                            <h5 class="movie-title">Joker: Folie a Deux</h5>
+                            <p class="movie-genre">Drama/Suspense/Thriller</p>
+                        </div>
+                        
+                    </div>
+                </a>
+            </div>
+    
+
+
+        
+            <div class="col-md-12 col-lg-3">
+                <div class="movie-card">
+                    <img src="{% static '/images/r5.avif' %}" alt="Pushpaka Vimanam" class="img-fluid">
+                    <div class="movie-details">
+    
+                        <h5 class="movie-title">Lubber Pandu</h5>
+                        <p class="movie-genre">Drama/Romantic/Sports</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+      </div>
+    </div>
+    <button style="background-color: #5c5e5c; border-radius: 50%; width: 25px; height: 25px; position: absolute; top: 37%;" class="carousel-control-prev " type="button1" data-bs-target="#demo3" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button style="background-color: #5f5f5f; border-radius: 50%; width: 25px; height: 25px; position: absolute; top: 37%; right: 0px;" class="carousel-control-next" type="button1" data-bs-target="#demo3" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+      </div>
+    </div>
+ </div>
+</div>
+
+      <footer style="overflow-y: hidden;" class="footer py-5 d-none d-md-block">
+        <div class="container-fluid">
+          <div class="row justify-content-center text-center text-md-start">
+            <div class="col-md-10">
+              <p class="text-white">
+                <a href="#" class=" footer-logo text-white fw-bold text-decoration-none"><img src="{% static '/images/icon1.png' %}" alt="">List your Show &nbsp; &nbsp;</a> 
+                Got a show, event, activity or a great experience? Partner with us & get listed on BookMyShow 
+                <a id="contact"  href="#" class="btn btn-danger ">Contact today! </a>
+            </p>
+            </div>
+      
+    <div id="row" class="row justify-content-center">
+        <div class="icon-box col-12 col-md-4 col-lg-3 mb-3 text-center ">
+          <i style="font-size: 70px;" class="fa-regular fa-user my-3"></i>
+          <p class="">24/7 Customer Care</p>
+        </div>
+        <div class="icon-box col-12 col-md-4 col-lg-3 mb-3 text-center">
+          <i style="font-size: 70px;" class="fa-solid fa-ticket my-3"></i>
+          <p >Resend Booking Confirmation</p>
+        </div>
+        <div class="icon-box col-12 col-md-4 col-lg-3 mb-3 text-center">
+          <i style="font-size: 70px;" class="fa-regular fa-envelope my-3"></i>
+          <p >Subscribe to the Newsletter</p>
+        </div>
+      </div>
+    </div>
+<!-- ------------------------------------ -->
+<div class="container mt-5">
+    <h4 id="heading">MOVIES NOW SHOWING IN KOCHI</h4>
+    <p class="para"><a id="text1" href="">vettaiyan</a> |
+    <a id="text1" href="">A.R.M</a> |
+    <a id="text1" href="">Kishkindha Kaandam</a> |
+    <a id="text1" href="">Venom: The Last Dance</a> |
+    <a id="text1" href="">Jocker: Folie a Deux</a> |
+    <a id="text1" href="">Thekku Vadakku</a> |
+    <a id="text1" href="">Pushpaka Vimanam</a> |
+    <a id="text1" href="">Maliyaxhagan</a> |
+    <a id="text1" href="">Oru Kattil oru muri</a> |
+    </p>
+</div>
+<div class="container mt-5">
+    <h4 id="heading">MOVIES NOW SHOWING IN KOCHI</h4>
+    <p class="para"><a id="text1" href="">vettaiyan</a> |
+    <a id="text1" href="">A.R.M</a> |
+    <a id="text1" href="">Kishkindha Kaandam</a> |
+    <a id="text1" href="">Venom: The Last Dance</a> |
+    <a id="text1" href="">Jocker: Folie a Deux</a> |
+    <a id="text1" href="">Thekku Vadakku</a> |
+    <a id="text1" href="">Pushpaka Vimanam</a> |
+    <a id="text1" href="">Maliyaxhagan</a> |
+    <a id="text1" href="">Oru Kattil oru muri</a> |
+    </p>
+</div>
+<div class="container mt-5">
+    <h4 id="heading">MOVIES BY GENRE</h4>
+    <p class="para"><a id="text1" href="">Drama Movies</a> |
+    <a id="text1" href="">Action Movies</a> |
+    <a id="text1" href="">Thriller Movies</a> |
+    <a id="text1" href="">Period Movies</a> |
+    <a id="text1" href="">Horror Movies</a> |
+    <a id="text1" href="">Fantasy Movies</a> |
+    <a id="text1" href="">Suspense Movies</a> |
+    <a id="text1" href="">Romantic Movies</a> |
+    <a id="text1" href="">Comady Movies</a> |
+    </p>
+</div>
+<div class="container mt-5">
+    <h4 id="heading">MOVIES BY LANGUAGE</h4>
+    <p class="para"><a id="text1" href="">Movies in English</a> |
+    <a id="text1" href="">Movies in Malayalam</a> |
+    <a id="text1" href="">Movies in Tamil</a> |
+    <a id="text1" href="">Movies in Kannada</a> |
+    <a id="text1" href="">Movies in telugu</a> |
+    <a id="text1" href="">Movies in Hindi</a> |
+    <a id="text1" href="">Movies in sindihi</a> |
+    <a id="text1" href="">Movies in bengali</a> |
+    <a id="text1" href="">Movies in marathi</a> |
+    </p>
+</div>
+<div class="container mt-5">
+    <h4 id="heading">SPORTS EVENTS IN KOCHI</h4>
+    <p class="para">
+        <a href="" id="text1">Running</a> |
+        <a href="" id="text1">Kabaddi</a> |
+        <a href="" id="text1">Athletics</a> |
+        <a href="" id="text1">Motorsports</a> |
+        <a href="" id="text1">Card Games</a> |
+        <a href="" id="text1">Hockey</a> |
+        <a href="" id="text1">Rugby</a> |
+        <a href="" id="text1">Badminton</a> |
+        <a href="" id="text1">Boxing</a> |
+        <a href="" id="text1">Pool</a>
+    </p>
+
+    <h4 id="heading">EVENTS IN TOP CITIES</h4>
+    <p class="para">
+        <a href="" id="text1">Events in Mumbai</a> |
+        <a href="" id="text1">Events in Delhi-NCR</a> |
+        <a href="" id="text1">Events in Bengaluru</a> |
+        <a href="" id="text1">Events in Hyderabad</a> |
+        <a href="" id="text1">Events in Pune</a> |
+        <a href="" id="text1">Events in Ahmedabad</a> |
+        <a href="" id="text1">Events in Kolkata</a> |
+        <a href="" id="text1">Events in Kochi</a>
+    </p>
+
+    <h4 id="heading">CINEMAS IN TOP CITIES</h4>
+    <p class="para">
+        <a href="" id="text1">Cinemas in Mumbai</a> |
+        <a href="" id="text1">Cinemas in Delhi-NCR</a> |
+        <a href="" id="text1">Cinemas in Chennai</a> |
+        <a href="" id="text1">Cinemas in Bengaluru</a> |
+        <a href="" id="text1">Cinemas in Hyderabad</a> |
+        <a href="" id="text1">Cinemas in Pune</a> |
+        <a href="" id="text1">Cinemas in Ahmedabad</a> |
+        <a href="" id="text1">Cinemas in Kolkata</a> |
+        <a href="" id="text1">Cinemas in Kochi</a>
+    </p>
+
+    <h4 id="heading">PLAYS IN TOP CITIES</h4>
+    <p class="para">
+        <a href="" id="text1">Plays in Mumbai</a> |
+        <a href="" id="text1">Plays in Delhi-NCR</a> |
+        <a href="" id="text1">Plays in Chennai</a> |
+        <a href="" id="text1">Plays in Bengaluru</a> |
+        <a href="" id="text1">Plays in Hyderabad</a> |
+        <a href="" id="text1">Plays in Pune</a> |
+        <a href="" id="text1">Plays in Kolkata</a> |
+        <a href="" id="text1">Plays in Kochi</a>
+    </p>
+
+    <h4 id="heading">ACTIVITIES IN TOP CITIES</h4>
+    <p class="para">
+        <a href="" id="text1">Activities in Mumbai</a> |
+        <a href="" id="text1">Activities in Delhi-NCR</a> |
+        <a href="" id="text1">Activities in Chennai</a> |
+        <a href="" id="text1">Activities in Bengaluru</a> |
+        <a href="" id="text1">Activities in Hyderabad</a> |
+        <a href="" id="text1">Activities in Pune</a> |
+        <a href="" id="text1">Activities in Ahmedabad</a> |
+        <a href="" id="text1">Activities in Kolkata</a> |
+        <a href="" id="text1">Activities in Kochi</a>
+    </p>
+
+    <h4 id="heading">MOVIES NOW SHOWING</h4>
+    <p class="para">
+        <a href="" id="text1">Vettaiyan</a> |
+        <a href="" id="text1">Vicky Vidya ka Woh Wala Video</a> |
+        <a href="" id="text1">Jigra</a> |
+        <a href="" id="text1">Martin</a> |
+        <a href="" id="text1">Vettaiyan - The Hunter</a> |
+        <a href="" id="text1">Devara - Part 1</a> |
+        <a href="" id="text1">Viswam</a> |
+        <a href="" id="text1">The House of Dead Horror</a> |
+        <a href="" id="text1">Wild Roller Coaster</a> |
+        <a href="" id="text1">Bohurupi</a>
+    </p>
+
+    <h4 id="heading">COUNTRIES</h4>
+    <p class="para">
+        <a href="" id="text1">Indonesia</a> |
+        <a href="" id="text1">Singapore</a> |
+        <a href="" id="text1">UAE</a> |
+        <a href="" id="text1">Sri Lanka</a> |
+        <a href="" id="text1">West Indies</a>
+    </p>
+
+    <h4 id="heading">HELP</h4>
+    <p class="para">
+        <a href="" id="text1">About Us</a> |
+        <a href="" id="text1">Contact Us</a> |
+        <a href="" id="text1">Current Opening</a> |
+        <a href="" id="text1">Press Release</a> |
+        <a href="" id="text1">Press Coverage</a> |
+        <a href="" id="text1">Sitemap</a> |
+        <a href="" id="text1">FAQs</a> |
+        <a href="" id="text1">Terms and Conditions</a> |
+        <a href="" id="text1">Privacy Policy</a>
+    </p>
+
+    <h4 id="heading">BOOKMYSHOW EXCLUSIVES</h4>
+    <p class="para">
+        <a href="" id="text1">Lollapalooza India</a> |
+        <a href="" id="text1">Superstar</a> |
+        <a href="" id="text1">BookAChange</a> |
+        <a href="" id="text1">Corporate Vouchers</a> |
+        <a href="" id="text1">Gift Cards</a> |
+        <a href="" id="text1">List My Show</a> |
+        <a href="" id="text1">Offers</a> |
+        <a href="" id="text1">Stream</a> |
+        <a href="" id="text1">Trailers</a>
+    </p>
+</div>
+<div class="line mt-5">
+    <hr class="left-line">
+    <img src="{% static '/images/loho2.png' %}" alt="Logo" class="logo">
+    <hr class="right-line">
+</div>
+<div class=" social mt-5 d-flex justify-content-center ">
+    <i id="social1" class="fa-brands fa-facebook-f mx-2"></i>
+        <i id="social1" class="fa-brands fa-x-twitter mx-2"></i>
+        <i id="social1" class="fa-brands fa-instagram mx-2"></i>
+        <i id="social1" class="fa-brands fa-youtube mx-2"></i>
+        <i id="social1" class="fa-brands fa-pinterest-p mx-2"></i>
+        <i id="social1" class="fa-brands fa-linkedin-in mx-2"></i>
+    </p>
+</div>
+
+<div class="text-center mt-5 ">
+    <p id="text2">copyright 2024 @ Bigtree Entertainment Pvt Ltd. All rights reserved</p>
+    <p id="text2">The content and image used on this site are copyright protected and copyrights vests with the respective owners. The usage of the content and image on this website is intended to promote the work and no endorsement of the
+        artist shall be implied. Unauthorized use is prohibited and punishable by law.
+    </p>
+
+</div>
+
+
+
+        </div>
+      </footer>
+      
+
+  
+
+        
+    
+</body>
+</html>

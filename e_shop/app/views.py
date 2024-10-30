@@ -24,6 +24,8 @@ def shop_logout(req):
     req.session.flush()
     return redirect(shop_login)
 
+# ----------------------------admin----------------------------------
+
 
 def shop_home(req):
     if 'shop' in req.session:
@@ -31,4 +33,35 @@ def shop_home(req):
         return render(req,'shop/shop_home.html',{'products':products})
     else:
        return redirect(shop_home)
+    
+def add_product(req):
+    if req.method=='POST':
+        id=req.POST['pro_id']
+        name=req.POST['name']
+        price=req.POST['price']
+        offer_price=req.POST['o_price']
+        file=req.FILES['img']
+        data=product.objects.create(pro_id=id,name=name,price=price,offer_price=offer_price,img=file)
+        data.save()
+        return redirect(shop_home)
+
+    return render (req,'shop/add_pro.html')
+
+def edit_pro(req,id):
+    pro=product.objects.get(pk=id)
+    if req.method=='POST':
+        e_id=req.POST['pro_id']
+        name=req.POST['name']
+        price=req.POST['price']
+        offer_price=req.POST['o_price']
+        file=req.FILES.get['img']
+        print(file)
+        if file:
+            product.objects.filter(pk=id).update(pro_id=e_id,name=name,price=price,offer_price=offer_price,img=file)
+        else:
+            product.objects.filter(pk=id).update(pro_id=e_id,name=name,price=price,offer_price=offer_price)
+        return redirect(shop_home)
+    return render(req,'shop/edit_pro.html',{'data':pro})
+
+
 

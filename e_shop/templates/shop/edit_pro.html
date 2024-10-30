@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>edit product</h2>
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="text" name="pro_id" placeholder="pro_id" value="{{data.pro_id}}">
+        <input type="text" name="name" placeholder="name" value="{{data.name}}">
+        <input type="number" name="price" placeholder="price" value="{{data.price}}">
+        <input type="number" name="o_price" placeholder="offer_price" value="{{data.offer_price}}">
+        <img src="{{data.img.url}}" alt="" style="width: 250px;height: 300px;">
+        <input type="file" name="img" id="">
+        <input type="submit" value="update">
+</body>
+</html>
