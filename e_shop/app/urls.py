@@ -12,6 +12,8 @@ urlpatterns=[
     path('add_pro',views.add_product),
     path('edit_pro/<id>',views.edit_pro),
     path('delete_pro/<id>',views.delete_pro),
+    path('register',views.register),
+    path('user_home',views.user_home),
 
 
 

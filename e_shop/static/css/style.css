@@ -28,10 +28,11 @@ h2 {
 }
 
 input {
-    margin-top: 10px;
+    margin-top: 20px;
     padding: 5px;
     border-radius: 20px;
     width: 300px;
+    height: 25px;
 }
 
 .box {
@@ -41,13 +42,25 @@ input {
     width: 500px;
     border: 2px solid blue;
     border-radius: 20px;
+    background-color: rgb(56, 209, 209);
 
 }
 
 .btn {
-    width: 150px;
+    width: 80px;
+    height: 40px;
     border-radius: 20px;
     margin-left: 30px;
     margin-top: 40px;
+    background-color: blue;
+    color: white;
 
+}
+.btn:hover{
+    background-color: rgb(58, 58, 136);
+    color: white;
+}
+.register{
+    margin-top: 30px;
+    color: blue;
 }

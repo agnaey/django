@@ -3,27 +3,54 @@ from django.http import HttpResponse
 from django.contrib.auth import authenticate,login,logout
 from . models import *
 import os
+from django.contrib.auth.models import User
+from django.contrib import messages
+
 
 # Create your views here.
 def shop_login(req):
     if 'shop' in req.session:
         return redirect(shop_home)
+    if 'user'in req.session:
+        return redirect(user_home)
     else:
-
         if req.method=='POST':
             uname=req.POST['uname']
             password=req.POST['password']
             data=authenticate(username=uname,password=password)
             if data:
                 login(req,data)
-                req.session['shop']=uname
-                return redirect(shop_home)  
-        return render(req,'login.html')
+                if data.is_superuser:
+                    req.session['shop']=uname
+                    return redirect(shop_home)
+                else:
+                    req.session['user']=uname
+                    return redirect(user_home)
+            else:
+                messages.warning(req, "username or password invalid.") 
+            return render(shop_login)
+        else:
+            return render(req,'login.html')
     
 def shop_logout(req):
     logout(req)
     req.session.flush()
     return redirect(shop_login)
+
+def register(req):
+    if req.method=='POST':
+        name=req.POST['name']
+        email=req.POST['email']
+        password=req.POST['password']
+        try:
+            data=User.objects.create_user(first_name=name,username=email,email=email,password=password)
+            data.save()
+            return redirect(shop_login)
+        except:
+            messages.warning(req,'user details already exits') 
+            return redirect(register)   
+    else:
+        return render(req,'register.html')
 
 # ----------------------------admin----------------------------------
 
@@ -71,6 +98,12 @@ def delete_pro(req,id):
     os.remove('media/'+url)
     data.delete()
     return redirect(shop_home)
+
+# -------------------------------admin------------------
+
+def user_home(req):
+    if 'user' in req.session:
+        return render(req,'user/user_home.html')
 
 
 

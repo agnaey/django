@@ -41,10 +41,11 @@
         }
 
         input {
+            height: 25px;
             margin-top: 10px;
-            padding: 5px;
+            padding: 20px;
             border-radius: 20px;
-            width: 300px;
+            width: 250px;
         }
 
         .box {
@@ -65,18 +66,32 @@
             margin-top: 40px;
 
         }
+        #register{
+            margin-left: 330px;
+            color: blue;
+        }
     </style>
 </head>
 
 <body>
     <h1>LOGIN page</h1>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-danger alert-dismissible">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        {{ message }}
+      </div>
+      {% endfor %}
+      {% endif %}
+
     <div class="box">
         <form action="" method="post">
             <h2>ADMIN</h2>
             {% csrf_token %} 
             Username : <input type="text" name="uname" />&nbsp; <i class="fa-solid fa-user"></i> <br>
             Password : <input type="password" name="password" />&nbsp;&nbsp;<i class="fa-solid fa-lock"></i> <br>
-            <input class="btn btn-outline-primary" type="submit" value="Login" />
+            <input class="btn btn-outline-primary" type="submit" value="Login" /><br>
+            <a id="register" href="register">register</a>
         </form>
     </div>
 </body>
