@@ -28,7 +28,7 @@ def shop_login(req):
                     return redirect(user_home)
             else:
                 messages.warning(req, "username or password invalid.") 
-            return render(shop_login)
+            return redirect(shop_login)
         else:
             return render(req,'login.html')
     

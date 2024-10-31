@@ -9,10 +9,77 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     {% load static %}
     <link rel="stylesheet" href="{% static '/css/style.css' %}" />
+    <style>
+        #cart{
+            font-size: 30px;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 20px;
+            color: #333; 
+        }
+        #cart:hover{
+            color: whitesmoke;
+            
+        }
+        #logout {
+            margin-left: auto;
+        }
+        li{
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .nav-link{
+            color: #000;
+        }
+    #search {
+        width: 350px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    
+
+    </style>
 </head>
 <body>
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">E_shop</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">view product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Wishlist</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Offer/deals</a>
+          </li>
+          <div class="d-flex justify-content-center">
+            <li class="nav-item" id="search">
+                <form class="d-flex" role="search" action="search" method="post">
+                  {% csrf_token %}
+                  <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-success" type="submit">Search</button>
+                </form>
+              </li>
+          </div>
+
+          <li  class="nav-item">
+            <a href="cart"><i class="fa-solid fa-cart-shopping" id="cart"></i></a>
+          </li>
+          <li class="nav-item">
+            <a id="logout" class="logout nav-link" href="logout"><h4>logout</h4></a>
+          </li>    
+        </ul>
+      </div>
+    </div>
+  </nav>
     <h2>user home</h2>
     
-    <a href="logout">logout</a>
 </body>
 </html>
