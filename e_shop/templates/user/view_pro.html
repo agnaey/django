@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <!-- <a href="view_pro/{{products.pk}}"> -->
+          <div class="card " style="width:400px">
+            <img class="card-img-top" src="{{products.img.url}}" alt="Card image" style="width:100%;height: 500px;">
+            <div class="card-body">
+              <h4 class="card-title">{{products.name}}</h4>
+             price : <p class="card-text" style="text-decoration: line-through; display: inline; "> {{products.price}}</p><br>
+             offer price: <p class="card-text" style="display: inline;">{{products.offer_price}}</p><br><br>
+             <a href="../add_to_cart/{{products.pk}}">add to cart</a>
+        <!-- </a> -->
+      </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

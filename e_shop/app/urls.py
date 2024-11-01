@@ -13,12 +13,12 @@ urlpatterns=[
     path('edit_pro/<id>',views.edit_pro),
     path('delete_pro/<id>',views.delete_pro),
     path('register',views.register),
-    path('user_home',views.user_home),
-
-
-
 
 
 # ----------------------user---------------------------
+    path('user_home',views.user_home),
+    path('view_pro/<id>',views.view_product),
+    path('add_to_cart/<pid>',views.add_to_cart),
+    path('cart_disp',views.cart_display),
 
 ]
