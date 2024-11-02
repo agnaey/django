@@ -4,26 +4,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+            body {
+        background-color: #dadbdd;
+      }
+              #cart {
+          font-size: 30px;
+          margin-top: 10px;
+          margin-right: 10px;
+          margin-left: 20px;
+          color: #333;
+        }
+    
+        #cart:hover {
+          color: whitesmoke;
+    
+        }
+    
+        #logout {
+          margin-left: auto;
+        }
+    
+        li {
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+    
+        .nav-link {
+          color: #000;
+        }
+    
+        #search {
+          width: 350px;
+        }
+    
+        h2 {
+          text-align: center;
+          text-decoration: underline;
+        }
+        #logout:hover {
+            text-decoration: underline;
+            color: red;
+          }
+          .card-body {
+            text-align: center;
+            font-size: 20px;
+            color: white;
+            background-color: rgb(0, 0, 0);
+          }
+          .card-text{
+            color: red;
+          }
+          a{
+            text-decoration: none;
+            color: white;
+          }
+          .container{
+            background-color: white;
+            padding: 30px;
+            border: 1px solid black;
+            border-radius: 15px;
+          }
+          .product_name{
+          font-size: 40px;
+        }
+        .offer_price{
+          font-size: 23px;
+          color: green;
+          font-weight: bold;
+        
+        }
+        .price{
+          font-size: 17px;
+          color: red;
+        }
+        .product_img{
+          border: 3px solid black;
+          border-radius: 15px;
+        }
+
+    </style>
 </head>
 <body>
-    
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4">
-        <!-- <a href="view_pro/{{products.pk}}"> -->
-          <div class="card " style="width:400px">
-            <img class="card-img-top" src="{{products.img.url}}" alt="Card image" style="width:100%;height: 500px;">
-            <div class="card-body">
-              <h4 class="card-title">{{products.name}}</h4>
-             price : <p class="card-text" style="text-decoration: line-through; display: inline; "> {{products.price}}</p><br>
-             offer price: <p class="card-text" style="display: inline;">{{products.offer_price}}</p><br><br>
-             <a href="../add_to_cart/{{products.pk}}">add to cart</a>
-        <!-- </a> -->
-      </div>
-        </div>
-      </div>
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">E_shop</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="user_home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">view product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Wishlist</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Offer/deals</a>
+          </li>
+          <div class="">
+            <li class="nav-item" id="search">
+              <form class="d-flex" role="search" action="search" method="post">
+                <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success" type="submit">Search</button>
+              </form>
+            </li>
+          </div>
 
+          <li class="nav-item">
+            <a href="cart_disp"><i class="fa-solid fa-cart-shopping" id="cart"></i></a>
+          </li>
+          <li class="nav-item">
+            <a id="logout" class="logout nav-link" href="logout">
+              <h4>logout</h4>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
+
+
+<div class="container mt-5">
+    <div class="row">
+  <div class="col-lg-6">
+    <img src="{{products.img.url}}" class="product_img" alt="Card image" style="width:400px; height: 500px;">
   </div>
+  <div class="col-lg-6 mt-5">
+    <h4 class="product_name">{{products.name}}</h4><br>
+    Price : <p class="price" style="text-decoration: line-through; display: inline;">{{products.price}}</p><br>
+  <p class="offer_price" style="display: inline;">  Offer Price : {{products.offer_price}}</p><br><br>
+    <a href="buy_now/{{products.pk}}" class="btn btn-outline-success">Buy Now</a>
+    {% if cart %}
+    <a href="../cart_disp" class="btn btn-outline-primary">Go to cart</a>
+    {% else %}
+    <a href="../add_to_cart/{{products.pk}}" class="btn btn-outline-primary">add to cart</a>
+    {% endif %}
+
+</div>
+</div>
+</div>
+
 </body>
 </html>

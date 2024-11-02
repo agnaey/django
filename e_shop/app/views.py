@@ -99,6 +99,8 @@ def delete_pro(req,id):
     data.delete()
     return redirect(shop_home)
 
+
+
 # -------------------------------user------------------
 
 def user_home(req):
@@ -120,7 +122,15 @@ def add_to_cart(req,pid):
     return redirect(cart_display)
 
 def cart_display(req):
-    return render(req,'cart_display.html')
+    user=User.objects.get(username=req.session['user'])
+    data=Cart.objects.filter(user=user)
+    return render(req,'cart_disp.html',{'data':data})
+
+def delete_cart(req,id):
+    data=Cart.objects.get(pk=id)
+    data.delete()
+    return redirect(cart_display)
+
 
 
 
