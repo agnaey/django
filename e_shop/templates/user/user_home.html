@@ -66,6 +66,9 @@
         border: 3px solid #000000;
         border-radius: 1cqmin;
       }
+      /* #offer_price{
+        font-size: 30px;
+      } */
   </style>
 </head>
 
@@ -123,7 +126,7 @@
             <div class="card-body">
               <h4 class="card-title">{{pro.name}}</h4>
              price : <p class="card-text" style="text-decoration: line-through; display: inline; "> {{pro.price}}</p><br>
-             offer price: <p class="card-text" style="display: inline;">{{pro.offer_price}}</p><br><br>
+             offer price: <p id="offer_price " class="card-text text-success" style="display: inline;">{{pro.offer_price}}</p><br><br>
         </a>
       </div>
         </div>

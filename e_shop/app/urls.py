@@ -13,6 +13,7 @@ urlpatterns=[
     path('edit_pro/<id>',views.edit_pro),
     path('delete_pro/<id>',views.delete_pro),
     path('register',views.register),
+    path('admin_vew_booking',views.admin_view_booking),
 
 
 # ----------------------user---------------------------

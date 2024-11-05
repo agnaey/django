@@ -99,7 +99,10 @@ def delete_pro(req,id):
     data.delete()
     return redirect(shop_home)
 
-
+def admin_view_booking(req):
+    user=User.objects.all()
+    data=Buy.objects.all()
+    return render(req,'shop/admin_booking.html',{'user':user,'data':data})
 
 # -------------------------------user------------------
 

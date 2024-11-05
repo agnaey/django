@@ -62,9 +62,6 @@
         text-decoration: none;
         color: white;
       }
-      .text-center{
-        text-decoration: underline;
-    }
       .container{
         background-color: white;
         padding: 30px;
@@ -72,7 +69,11 @@
         border-radius: 15px;
       }
       .product_name{
-      font-size: 40px;
+      font-size: 30px;
+      
+    }
+    .text-center{
+        text-decoration: underline;
     }
     .offer_price{
       font-size: 23px;
@@ -87,6 +88,11 @@
     .product_img{
       border: 3px solid black;
       border-radius: 15px;
+    }
+    .user_name{
+      font-size: 40px;
+      font-weight: bold;
+    
     }
 
 </style>
@@ -122,7 +128,7 @@
               </div>
     
               <li class="nav-item">
-                <a href="cart_disp"><i class="fa-solid fa-cart-shopping" id="cart"></i></a>
+                <a href=""><i class="fa-solid fa-cart-shopping" id="cart"></i></a>
               </li>
               <li class="nav-item">
                 <a id="logout" class="logout nav-link" href="logout">
@@ -134,21 +140,23 @@
         </div>
       </nav>
 
-      <h2 class="text-center">BOOKINGS</h2>
+      <h2 class="text-center">USER BOOKINGS</h2>
       <div class="container mt-5">
-        <h3 class="item text-center mb-4">Your items</h3>
+        <h3 class="item text-center mb-4">User items</h3>
         <div class="row">
           {% for i in data %}
       <div class="col-lg-6 mt-2">
         <img src="{{i.products.img.url}}" class="product_img" alt="" style="width:400px; height: 500px;">
       </div>
       <div class="col-lg-6 mt-5">
+        <h4 class="user_name">{{i.user.username}}</h4><br>
         <h4 class="product_name">{{i.products.name}}</h4><br>
         <!-- Price : <p class="price" style="text-decoration: line-through; display: inline;">{{cart_obj.products.price}}</p><br> -->
        <p class="offer_price" style="display: inline;"> Price : {{i.price}}</p><br><br>
        <p class="Date" style="display: inline;"> Date : {{i.date}}</p><br><br>
-       <a href="#" class="btn btn-outline-primary">Order Status</a>
+       <a href="#" class="btn btn-outline-success">Confirm Order</a>
         <a href="#" class="btn btn-outline-warning">Cancel Order</a>
+        <a href="#" class="btn btn-outline-primary">User Details</a>
         <!-- <a href="../delete_cart/{{cart_obj.id}}" class="btn btn-danger">Delete</a> -->
     
     </div>
