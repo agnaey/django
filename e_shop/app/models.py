@@ -13,4 +13,10 @@ class product (models.Model):
 class Cart(models.Model):
     user=models.ForeignKey(User,on_delete=models.CASCADE)
     products=models.ForeignKey(product,on_delete=models.CASCADE)
+
+class Buy(models.Model):
+    user=models.ForeignKey(User,on_delete=models.CASCADE)
+    products=models.ForeignKey(product,on_delete=models.CASCADE)  
+    price=models.IntegerField()             ##price is added bcs it should not change when product price incres after buying
+    date=models.DateField(auto_now_add=True)
     

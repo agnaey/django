@@ -149,7 +149,7 @@
       <h4 class="product_name">{{cart_obj.products.name}}</h4><br>
       Price : <p class="price" style="text-decoration: line-through; display: inline;">{{cart_obj.products.price}}</p><br>
      <p class="offer_price" style="display: inline;"> Offer Price : {{cart_obj.products.offer_price}}</p><br><br>
-      <a href="buy_now/{{products.pk}}" class="btn btn-outline-success">Buy Now</a>
+      <a href="../buy_product/{{cart_obj.products.pk}}" class="btn btn-outline-success">Buy Now</a>
       <a href="../delete_cart/{{cart_obj.id}}" class="btn btn-danger">Delete</a>
   
   </div>
