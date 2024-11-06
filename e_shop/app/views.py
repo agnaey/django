@@ -101,8 +101,8 @@ def delete_pro(req,id):
 
 def admin_view_booking(req):
     user=User.objects.all()
-    data=Buy.objects.all()
-    return render(req,'shop/admin_booking.html',{'user':user,'data':data})
+    bookings=Buy.objects.all()[::-1] #[:3]  # thhis is used to limit the images to 3
+    return render(req,'shop/admin_booking.html',{'user':user,'data':bookings})
 
 # -------------------------------user------------------
 
@@ -134,7 +134,7 @@ def add_to_cart(req,pid):
 
 def cart_display(req):
     user=User.objects.get(username=req.session['user'])
-    data=Cart.objects.filter(user=user)
+    data=Cart.objects.filter(user=user)[::-1]
     return render(req,'user/cart_disp.html',{'data':data})
 
 def delete_cart(req,id):
@@ -152,7 +152,7 @@ def buy_pro(req,id):
 
 def user_view_booking(req):
     user=User.objects.get(username=req.session['user'])
-    data=Buy.objects.filter(user=user)
+    data=Buy.objects.filter(user=user)[::-1]
     return render(req,'user/view_booking.html',{'data':data})
 
 
