@@ -3,6 +3,6 @@ from . import views
 
 urlpatterns = [
     path('', views.index_page),
-    path('arm',views.armpage),
+    path('sec/<id>',views.secpage),
 
 ]

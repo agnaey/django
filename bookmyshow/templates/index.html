@@ -625,21 +625,21 @@
             <div class="carousel-inner">
                 <div class="carousel-item active ">
                     <div class="row justify-content-center">
+                        {% for i in data %}
                         <div class="col-md-3">
-                            <a class="text-decoration-none text-black" href="arm">
+                            <a class="text-decoration-none text-black" href="sec/{{i.pk}}">
                                 <div class="movie-card">
-                                    <img src="{% static '/images/rec1.avif' %}" class="img-fluid">
+                                    <img src="{{i.fg_image.url}}" style="height: 400px;" class="img-fluid">
                                     <div class="movie-details ">
                 
-                                        <h5 class="movie-title">A.R.M</h5>
-                                        <p class="movie-genre">Action/Adventure/Drama</p>
+                                        <h5 class="movie-title">{{i.movie_name}}</h5>
+                                        <p class="movie-genre">{{i.category}}</p>
                                     </div>
                                 </div>
                             </a>
-            
                         </div>
-                
-                        <div class="col-md-3">
+                        {% endfor %}
+                        <!-- <div class="col-md-3">
                             <a class="text-decoration-none text-black" href="2ndpage.html">
                                 <div class="movie-card">
                                     <img src="{% static '/images/rec2.avif' %}" alt="Kishkindha Kaandam" class="img-fluid">
@@ -652,8 +652,8 @@
             
             
                         </div>
-                
-                        <div class="col-md-3">
+                 -->
+                        <!-- <div class="col-md-3">
                             <a class="text-decoration-none text-black" href="2ndpage.html">
                                 <div class="movie-card">
                                     <img src="{% static '/images/rec3.avif' %}" alt="Kishkindha Kaandam" class="img-fluid">
@@ -664,9 +664,9 @@
                                     
                                 </div>
                             </a>
-                        </div>
+                        </div> -->
                 
-                        <div class="col-md-3">
+                        <!-- <div class="col-md-3">
                             <div class="movie-card">
                                 <img src="{% static '/images/rec4.avif' %}" alt="Thekku Vadakku" class="img-fluid">
                                 <div class="movie-details">
@@ -675,7 +675,7 @@
                                     <p class="movie-genre">Comedy/Drama</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         
                         <!-- <div class="col-md-3">
                             <div class="movie-card">
@@ -693,21 +693,23 @@
               </div>
               <div class="carousel-item">
                 <div class="row justify-content-center">
+                    {% for i in data1 %}
                     <div class="col-md-3">
-                        <a class="text-decoration-none text-black" href="2ndpage.html">
+                        <a class="text-decoration-none text-black" href="sec/{{i.pk}}">
                             <div class="movie-card">
-                                <img src="{% static '/images/r1.avif' %}" class="img-fluid">
+                                <img src="{{i.fg_image.url}}" class="img-fluid">
                                 <div class="movie-details ">
                 
-                                    <h5 class="movie-title">Oru Kattil Oru Muri</h5>
-                                    <p class="movie-genre">Family/Romantic/Drama</p>
+                                    <h5 class="movie-title">{{i.movie_name}}</h5>
+                                    <p class="movie-genre">{{i.category}}</p>
                                 </div>
                             </div>
                         </a>
             
                     </div>
+                {% endfor %}
                 
-                    <div class="col-md-3">
+                    <!-- <div class="col-md-3">
                         <a class="text-decoration-none text-black" href="2ndpage.html">
                             <div class="movie-card">
                                 <img src="{% static '/images/r2.avif' %}" alt="Kishkindha Kaandam" class="img-fluid">
@@ -719,9 +721,9 @@
                         </a>
             
             
-                    </div>
+                    </div> -->
                 
-                    <div class="col-md-3">
+                    <!-- <div class="col-md-3">
                         <a class="text-decoration-none text-black" href="2ndpage.html">
                             <div class="movie-card">
                                 <img src="{% static '/images/r3.avif' %}" alt="Kishkindha Kaandam" class="img-fluid">
@@ -732,10 +734,10 @@
                                     
                             </div>
                         </a>
-                    </div>
+                    </div> -->
                 
                     <!-- Movie Card 4 -->
-                    <div class="col-md-3">
+                    <!-- <div class="col-md-3">
                         <div class="movie-card">
                             <img src="{% static '/images/r4.avif' %}" alt="Thekku Vadakku" class="img-fluid">
                             <div class="movie-details">
@@ -744,7 +746,7 @@
                                 <p class="movie-genre">Action/Adventure</p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 
                     <!-- <div class="col-md-3">
                         <div class="movie-card">

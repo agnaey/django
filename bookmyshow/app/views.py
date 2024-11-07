@@ -1,11 +1,14 @@
 from django.shortcuts import render
-# from . import views
+from . models import *
 
 # Create your views here.
 
 def index_page(request):
-    return render(request, 'index.html')
+    data=movie.objects.all()[:4]
+    data1=movie.objects.all()[4:9]
+    return render(request, 'index.html',{'data':data,'data1':data1})
 
-def armpage(request):
-    return render(request, 'armpage.html')
+def secpage(request,id):
+    data=movie.objects.get(pk=id)
+    return render(request, 'secpage.html',{'data':data})
 

@@ -582,12 +582,12 @@
         </nav>
 
         <!-- main -->
-        <div id="main1" class="image-fluid d-flex ">
+        <div id="main1" style="background-image: url({{data.bg_image.url}});" class="image-fluid d-flex ">
             <div id="main2" class=" row align-items-center">
                 <!-- Movie Card 1 -->
                 <div class="col-md-4">
                     <div class="movie-card">
-                        <img src="{% static '/images/arm1.avif' %}" alt="A.R.M">
+                        <img src="{{data.fg_image.url}}" alt="A.R.M">
                         <div class="movie-details">
                             <div class="movie-stats" style="background-color: #000000">
                                 <span> In cenima</span>
@@ -598,7 +598,7 @@
                 </div>
                 <div id="main3" class="col-md-8">
                     <div class="movieinfo">
-                        <div class="movietitle"><h1>A.R.M</h1></div>
+                        <div class="movietitle"><h1>{{data.movie_name}}</h1></div>
                         <div id="rating" class="d-flex align-items-center">
                             <span id="star" class="star text-orange">&nbsp;&nbsp; ★</span>
                             <span class="score mx-2"><b>8.7/10</b></span>
@@ -609,7 +609,7 @@
                             <div id="lang" class="col-2"><b>2D,3D</b></div>
                             <div id="lang" class="col-9"><span class="language">Malayalam, Hindi, Tamil, Kannada, Telugu</span></div>
                         </div>
-                        <div class="duration mt-3"><b>2h 23m • Action,Adventure, Drama,Period • UA • 12 Sep, 2024</b></div></div>
+                        <div class="duration mt-3"><b>{{data.time_duration}} • {{data.category}} • UA • {{data.date}}</b></div></div>
                         
 
                         <a id="book" class="mt-5" href="#"><b>Book tickets</b></a>

@@ -10,6 +10,10 @@ class movie(models.Model):
     category=models.TextField()
     date=models.DateField()
 
+
+    def __str__(self):
+        return self.movie_name
+
 class lang(models.Model):
     language=models.TextField()
 
