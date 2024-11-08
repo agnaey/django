@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>{{data.movie_name}}</title>
         <!-- {% load static %} -->
         <!-- <link rel="stylesheet" href="style.css"> -->
         <style>
@@ -640,12 +640,18 @@
         <!-- The slideshow/carousel -->
         <div class="carousel-inner">
           <div class="carousel-item active">
+            {% for i in member %}
+            {% if i.cast %}
             <div class="d-flex gap-2">
             <div>
-            <img src="{% static '/images/c1.avif' %}" class=" d-inline rounded-circle" style="width:165px;" alt="">
-            <figcaption style="text-align: center;">Tovino Thomas</figcaption> 
+            <img src="{{ i.act_img.url }}" class=" d-inline rounded-circle" style="width:165px;" alt="">
+            <figcaption style="text-align: center;">{{ i.name }}</figcaption> 
+            <figcaption class="text-secondary" style="text-align: center;">{{i.role}}</figcaption> 
            </div>
-           <div>
+
+           {% endif %}
+           {% endfor %}
+           <!-- <div>
             <img src="{% static '/images/c2.avif' %}" class=" d-inline rounded-circle" style="width:165px;" alt="">
             <figcaption style="text-align: center;">Krithi</figcaption>
            </div>
@@ -668,12 +674,12 @@
             <div> 
             <img src="{% static '/images/c7.avif' %}" class=" d-inline rounded-circle" style="width:165px;" alt="">
             <figcaption style="text-align: center;">Madhupal</figcaption> 
-           </div>
+           </div> -->
         </div>
 
 
           </div>
-          <div class="carousel-item">
+          <!-- <div class="carousel-item">
             <div class="d-flex gap-2">
                 <div>
                 <img src="{% static '/images/c8.avif' %}" class=" d-inline rounded-circle" style="width:165px;" alt="">
@@ -702,7 +708,7 @@
                 <div> 
                     <img src="{% static '/images/c14.avif' %}" class=" d-inline rounded-circle" style="width:165px;" alt="">
                     <figcaption style="text-align: center;">Maala</figcaption>
-                    </div>
+                    </div> -->
           </div>   
   
           </div>
@@ -721,15 +727,19 @@
 
 <div class="sample container p-5">
     <h3 class="mb-4 container " ><b>Crew</b></h3>
-
+    {% for i in member %}
+    {% if i.crew %}
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-6 g-4">
         <div class="col">
-            <img src="{% static '/images/cr1.avif' %}" class="img-fluid rounded-circle" alt="">
-            <figcaption style="text-align: center;">Jithin Laal</figcaption> 
-            <figcaption class="text-secondary" style=" text-align: center;">Director</figcaption> 
+            <img src="{{ i.act_img.url }}" class="img-fluid rounded-circle" alt="">
+            <figcaption style="text-align: center;"> {{ i.name }}</figcaption> 
+            <figcaption class="text-secondary" style=" text-align: center;">{{ i.role }}</figcaption> 
 
         </div>
-        <div class="col">
+
+        {% endif %}
+        {% endfor %}
+        <!-- <div class="col">
             <img src="{% static '/images/cr2.avif' %}" class="img-fluid rounded-circle" alt="">
             <figcaption style="text-align: center;">Listin Stephen</figcaption>
             <figcaption class="text-secondary" style=" text-align: center;">Producer</figcaption> 
@@ -753,7 +763,7 @@
             <img src="{% static '/images/cr6.avif' %}" class="img-fluid rounded-circle" alt="">
             <figcaption style="text-align: center;">Shameer</figcaption>
             <figcaption class="text-secondary" style=" text-align: center;">Editor</figcaption> 
-        </div>
+        </div> -->
     </div>
     <hr class="mx-auto d-block" width="100%">
 
@@ -985,20 +995,22 @@
     <div class="carousel-inner">
         <div class="carousel-item active ">
             <div class="row justify-content-center">
+                {% for i in data2 %}
                 <div class="col-md-12 col-lg-3">
-                    <a class="text-decoration-none text-black" href="2ndpage.html">
+                    <a class="text-decoration-none text-black" href="../sec/{{i.pk}}">
                         <div class="movie-card">
-                            <img src="{% static '/images/r1.avif' %}" class="img-fluid">
+                            <img src="{{ i.fg_image.url }}" style="height: 370px" class="img-fluid">
                             <div class="movie-details ">
             
-                                <h5 class="movie-title">Oru Kattil Oru Muri</h5>
-                                <p class="movie-genre">Family/Romantic/Drama</p>
+                                <h5 class="movie-title">{{i.movie_name}}</h5>
+                                <p class="movie-genre">{{i.category}}</p>
                             </div>
                         </div>
                     </a>
-        
                 </div>
-            
+                {% endfor %}
+
+<!--             
                 <div class="col-md-12 col-lg-3">
                     <a class="text-decoration-none text-black" href="2ndpage.html">
                         <div class="movie-card">
@@ -1026,7 +1038,6 @@
                     </a>
                 </div>
             
-                <!-- Movie Card 4 -->
                 <div class="col-md-12 col-lg-3">
                     <div class="movie-card">
                         <img src="{% static '/images/r4.avif' %}" alt="Thekku Vadakku" class="img-fluid">
@@ -1036,7 +1047,7 @@
                             <p class="movie-genre">Action/Adventure</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
         
                 <!-- <div class="col-md-3">
@@ -1054,19 +1065,21 @@
       </div>
       <div class="carousel-item">
         <div class="row justify-content-center">
+            {% for i in data1 %}
             <div class="col-md-12 col-lg-3">
                 <a class="text-decoration-none text-black" href="2ndpage.html">
                     <div class="movie-card">
-                        <img src="{% static '/images/rec2.avif' %}" alt="Kishkindha Kaandam" class="img-fluid">
+                        <img src="{{i.fg_image.url}}" style="height: 370px;" alt="Kishkindha Kaandam" class="img-fluid">
                         <div class="movie-details">
-                            <h5 class="movie-title">Kishkindha Kaandam</h5>
-                            <p class="movie-genre">Mystery/Thriller</p>
+                            <h5 class="movie-title">{{i.movie_name}}</h5>
+                            <p class="movie-genre">{{i.category}}</p>
                         </div>
                     </div>
                 </a>
             </div>
+            {% endfor %}
 
-            <div class="col-md-12 col-lg-3">
+            <!-- <div class="col-md-12 col-lg-3">
                 <a class="text-decoration-none text-black" href="2ndpage.html">
                     <div class="movie-card">
                         <img src="{% static '/images/rec1.avif' %}" class="img-fluid">
@@ -1107,7 +1120,7 @@
                         <p class="movie-genre">Drama/Romantic/Sports</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         
 

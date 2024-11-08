@@ -20,3 +20,11 @@ class lang(models.Model):
 class movie_lang(models.Model):
     movie=models.ForeignKey(movie,on_delete=models.CASCADE)
     lang=models.ForeignKey(lang,on_delete=models.CASCADE)
+
+class members(models.Model):
+    name=models.TextField()
+    act_img=models.FileField()
+    role=models.TextField()
+    cast=models.BooleanField(default=False)
+    crew=models.BooleanField(default=False)
+    movie=models.ForeignKey(movie,on_delete=models.CASCADE)

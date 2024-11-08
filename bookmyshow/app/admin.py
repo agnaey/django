@@ -4,3 +4,4 @@ from . models import *
 admin.site.register(movie)
 admin.site.register(lang)
 admin.site.register(movie_lang)
+admin.site.register(members)

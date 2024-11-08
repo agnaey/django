@@ -10,5 +10,10 @@ def index_page(request):
 
 def secpage(request,id):
     data=movie.objects.get(pk=id)
-    return render(request, 'secpage.html',{'data':data})
+    member=members.objects.filter(movie=data)
+
+
+    data1=movie.objects.all()[:4]
+    data2=movie.objects.all()[4:9]
+    return render(request, 'secpage.html',{'data':data,'member':member,'data1':data1,'data2':data2,})
 
