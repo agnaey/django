@@ -5,6 +5,8 @@ from . models import *
 import os
 from django.contrib.auth.models import User
 from django.contrib import messages
+from django.core.mail import send_mail
+from django.conf import settings
 
 
 # Create your views here.
@@ -42,6 +44,8 @@ def register(req):
         name=req.POST['name']
         email=req.POST['email']
         password=req.POST['password']
+        send_mail('e_shop account', 'e_shop account created', settings.EMAIL_HOST_USER, [email])
+
         try:
             data=User.objects.create_user(first_name=name,username=email,email=email,password=password)
             data.save()
